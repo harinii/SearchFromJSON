@@ -10,7 +10,7 @@ run `rake db:seed`  This will initialize the database with see data. The seed fi
 
 ## How to use 
 - Go to rails console.
-- Type `SearchController.SearchMe(object, field, value)` where object is one of the [User, ticket, organization. field is the column name which is the search criteria and value determines the exact record to look for. 
+- Type `SearchController.SearchMe(object, field, value)` where object is one of the [User, ticket, organization]. field is the column name which is the search criteria and value determines the exact record to look for. 
 Example : `SearchController.SearchMe("User", "name", "Francisca Rasmussen")` will return the details of all the users whose name is "Francisca Rasmussen", the information of the organization that the user belongs to and all the tickets that are either assigned to or submitted by this user. 
 Similarly, `SearchController.SearchMe("Ticket", "subject", "abc")` will return the ticket information, the user information for the asignee and the submitter and the organization information for the ticket.
 The same goes with `SearchController.SearchMe("Organization", "_id", "101")` will return the organization information, the information of all the users who belong to this organization and all the tickets that belong to this organization.
