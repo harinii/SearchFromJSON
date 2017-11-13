@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  _id: MyString
+  url: MyString
+  external_id: MyString
+  name: MyString
+  domain_names: MyString
+
+two:
+  _id: MyString
+  url: MyString
+  external_id: MyString
+  name: MyString
+  domain_names: MyString
