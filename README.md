@@ -2,6 +2,8 @@
 
 Given that the data is in the JSON files provided, this is a simple implementation of querying and joining data across different entities. The provided json files are in the public folder. This is a rails console application. The logic to search is in the controller. 
 
+Before you start, please run `bundle install` to install the missing gems (This application uses `awesome-print` to make the output better readable).
+
 ## Database creation
 run `rake db:migrate` This will migrate the schema to SQLite
 
@@ -9,7 +11,7 @@ run `rake db:migrate` This will migrate the schema to SQLite
 run `rake db:seed`  This will initialize the database with see data. The seed file reads the data from the json files and populates the database.
 
 ## How to use 
-- Go to rails console.
+- Go to rails console (Type `rails c` on the terminal).
 - Type `SearchController.SearchMe(object, field, value)` where object is one of the [User, ticket, organization]. field is the column name which is the search criteria and value determines the exact record to look for. 
 Example : `SearchController.SearchMe("User", "name", "Francisca Rasmussen")` will return the details of all the users whose name is "Francisca Rasmussen", the information of the organization that the user belongs to and all the tickets that are either assigned to or submitted by this user. 
 Similarly, `SearchController.SearchMe("Ticket", "subject", "abc")` will return the ticket information, the user information for the asignee and the submitter and the organization information for the ticket.
